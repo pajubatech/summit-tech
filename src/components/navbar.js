@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from '@mui/material/Button';
+import DragHandleRoundedIcon from '@mui/icons-material/DragHandleRounded';
 import "../styles/navbar.css";
 
 function Navbar() {
@@ -18,15 +19,19 @@ function Navbar() {
         </Link>
         <div className="hiddenLinks">
           <Link to="/"> Início </Link>
+          <Link to="/agenda"> Agenda </Link>
         </div>
       </div>
       <div className="rightSide">
         <Link to="/"> Início </Link>
+        <Link to="/agenda"> Agenda </Link>
         <Button variant="contained">
           Inscrições
         </Button>
-        
-      </div>
+        </div>  
+        <button className="togglebutton" onClick={toggleNavbar}>
+          <DragHandleRoundedIcon />
+        </button>
     </div>
   );
 }
